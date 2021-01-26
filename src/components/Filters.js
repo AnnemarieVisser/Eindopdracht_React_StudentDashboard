@@ -10,7 +10,7 @@ const Filters = (props) => {
 
   return (
     <div className="filters">
-      <p>Filter difficulty or fun:</p>
+      <p>Select your filters here:</p>
       <div>
         <label style={labelStyleDifficult}>
           <input

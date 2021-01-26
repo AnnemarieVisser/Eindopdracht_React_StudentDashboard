@@ -30,7 +30,7 @@ const ScoresPerAssignment = (props) => {
         </h3>
       </div>
       <div>
-        <Legenda legendaTitle={"Scores for each assignment"} />
+        <Legenda legendaTitle={"Scores per assignment per student"} />
         <BarsPerAssignment
           data={props.dataRightAssignment}
           persons={props.persons}
