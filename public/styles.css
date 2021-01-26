@@ -1,0 +1,97 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #14213d;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.barChart {
+    width: 600px;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+}
+
+.nav {
+    list-style: none;
+    flex: 1;
+    max-width: 300px;
+    padding: 5px;
+}
+
+.home {
+
+    background-color: #FCA311;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+a {
+    color:#14213D;
+    text-decoration: none;
+    background-color: #FCA311;
+}
+
+.navPerStudent {
+    display: flex;
+    flex-direction: column;    
+}
+
+.navPerStudent li {
+    background-color: #FCA311;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.navPerAssignment li {
+    background-color: #FCA311;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.studentPage {
+    color: #e5e5e5;
+    text-align: center;
+}
+
+.studentPage img {
+    width: 100px;
+    margin: 5px;
+}
+
+.filters {
+    color: #e5e5e5;
+    border: 3px solid white;
+    padding: 10px 5px;
+
+}
+
+.gold {
+    color: #C2831C;
+}
+
+.blue {
+    color: #7D8391;
+}
+
+/* 
+Radio button styling for all assignment page: */

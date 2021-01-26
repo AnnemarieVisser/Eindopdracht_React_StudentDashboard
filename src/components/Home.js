@@ -6,7 +6,12 @@ const Home = (props) => {
     <div>
       <div>
         <h1>React Student Dashboard</h1>
-        
+        <p className="gold">
+          The golden bar shows average score for difficulty.
+      </p>
+        <p className="blue">
+          The dark blue bar represents the average score for fun.
+      </p>
       </div>
       <div>
         <BarChart
@@ -16,7 +21,7 @@ const Home = (props) => {
           checkedFunFactor={props.checkedFunFactor}
         />
       </div>
-     
+
     </div>
   );
 };

@@ -9,8 +9,8 @@ const Filters = (props) => {
     : { color: "green" };
 
   return (
-    <div>
-      <p>Use filters:</p>
+    <div className="filters">
+      <p>Filter difficulty or fun:</p>
       <div>
         <label style={labelStyleDifficult}>
           <input

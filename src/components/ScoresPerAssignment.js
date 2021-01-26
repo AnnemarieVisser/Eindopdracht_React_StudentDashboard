@@ -11,7 +11,7 @@ const ScoresPerAssignment = (props) => {
           name="sort-assignments"
           value={assignment}
           onChange={(event) => props.filterAssignments(event.target.value)}
-        ></input>{" "}
+        />
         {assignment}
       </label>
     </div>
@@ -22,11 +22,11 @@ const ScoresPerAssignment = (props) => {
   return (
     <div>
       <div>
-        <h2>Score per assignment</h2>
+        <h1>Score per assignment</h1>
         <h3>
           {dataAssignment.length !== 0
             ? "Selection: " + dataAssignment[0].assignment
-            : "No selection made yet"}
+            : "Please select an assignment below"}
         </h3>
       </div>
       <div>
@@ -36,6 +36,7 @@ const ScoresPerAssignment = (props) => {
           persons={props.persons}
         />
       </div>
+
       <div>
         {sortingRadioButtons}
       </div>
