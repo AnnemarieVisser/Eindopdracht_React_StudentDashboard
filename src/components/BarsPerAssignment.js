@@ -1,5 +1,10 @@
 import React from "react";
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryGroup } from "victory";
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryAxis,
+  VictoryGroup,
+} from "victory";
 
 const BarsPerAssignment = (props) => {
   return (
