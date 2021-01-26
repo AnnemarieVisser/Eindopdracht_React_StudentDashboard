@@ -36,10 +36,7 @@ const BarChart = (props) => {
         domainPadding={10}
         containerComponent={
           <VictoryZoomContainer
-            allowZoom={true}
-            allowPan={true}
             zoomDimension="x"
-            zoomDomain={{ x: [0, 28.5] }}
           />
         }
       >

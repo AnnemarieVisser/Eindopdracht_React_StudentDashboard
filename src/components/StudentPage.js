@@ -5,7 +5,7 @@ import Legenda from "./Legenda";
 
 const Studentpage = (props) => {
   const profiles = props.studentProfiles;
-  const rightProfile = profiles.filter(
+  const profileOfPerson = profiles.filter(
     (profile) => profile.key === props.person
   );
 
@@ -30,7 +30,7 @@ const Studentpage = (props) => {
           checkedFunFactor={props.checkedFunFactor}
           setStateFunFactor={props.setStateFunFactor}
         />
-        {rightProfile}
+        {profileOfPerson}
       </div>
     </div>
   );

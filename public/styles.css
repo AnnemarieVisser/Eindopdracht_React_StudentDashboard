@@ -2,24 +2,26 @@
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+body {
+    background-color: #14213d;
 }
 
 .container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #14213d;
     color: white;
-}
-
-h1 {
-    text-align: center;
 }
 
 .barChart {
     width: 600px;
     background-color: #E5E5E5;
     border-radius: 10px;
+    box-shadow: 0 0 5px #FCA311;
+    margin: 10px;
 }
 
 .nav {
@@ -30,7 +32,6 @@ h1 {
 }
 
 .home {
-
     background-color: #FCA311;
     list-style-type: none;
     display: inline-block;
@@ -70,7 +71,6 @@ a {
 
 .studentPage {
     color: #e5e5e5;
-    text-align: center;
 }
 
 .studentPage img {
@@ -82,6 +82,9 @@ a {
     color: #e5e5e5;
     border: 3px solid white;
     padding: 10px 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #FCA311;
 
 }
 
@@ -92,6 +95,3 @@ a {
 .blue {
     color: #7D8391;
 }
-
-/* 
-Radio button styling for all assignment page: */
