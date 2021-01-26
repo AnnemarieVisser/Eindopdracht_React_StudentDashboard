@@ -3,20 +3,20 @@ import { VictoryBar, VictoryChart, VictoryAxis, VictoryGroup } from "victory";
 
 const BarsPerAssignment = (props) => {
   return (
-    <div>
+    <div className="barChart">
       <VictoryChart domainPadding={20} className="graph">
         <VictoryGroup offset={10}>
           <VictoryBar
             data={props.data}
             x="name"
             y="scoreDifficulty"
-            style={{ data: { fill: "#fee440" } }}
+            style={{ data: { fill: "#C2831C" } }}
           />
           <VictoryBar
             data={props.data}
             x="name"
             y="scoreFunFactor"
-            style={{ data: { fill: "#00bbf9" } }}
+            style={{ data: { fill: "#14213D" } }}
           />
         </VictoryGroup>
         <VictoryAxis

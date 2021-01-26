@@ -23,21 +23,21 @@ const BarChart = (props) => {
   }));
 
   const difficultBarStyle = props.checkedDifficult
-    ? { data: { fill: "#fee440" }, labels: { fontSize: 8 } }
+    ? { data: { fill: "#C2831C" }, labels: { fontSize: 8 } }
     : { data: { fillOpacity: 0 }, labels: { fontSize: 8 } };
 
   const funFactorBarStyle = props.checkedFunFactor
-    ? { data: { fill: "#00bbf9" }, labels: { fontSize: 8 } }
+    ? { data: { fill: "#14213D" }, labels: { fontSize: 8 } }
     : { data: { fillOpacity: 0 }, labels: { fontSize: 8 } };
 
   return (
-    <div>
+    <div class="barChart">
       <VictoryChart
         domainPadding={10}
         containerComponent={
           <VictoryZoomContainer
-            allowZoom={false}
-            allowPan={false}
+            allowZoom={true}
+            allowPan={true}
             zoomDimension="x"
             zoomDomain={{ x: [0, 28.5] }}
           />

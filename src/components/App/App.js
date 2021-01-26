@@ -88,17 +88,21 @@ const App = () => {
 
   return (
     <Router>
-      <div>
-        <nav>
+      <div className="container">
+        <nav className="nav">
           <div>
-            <ul>
+            <ul className="home">
               <li>
                 <Link to="/">
-                  Home
+                  Show all students
                 </Link>
               </li>
+            </ul>
+            <ul className="navPerStudent">
               <li>Show chart per student:</li>
               {linkItemsNav}
+            </ul>
+            <ul className="navPerAssignment">
               <li>Show score per assignment:</li>
               <li>
                 <Link to="/score-per-assignment">
@@ -108,7 +112,7 @@ const App = () => {
             </ul>
           </div>
         </nav>
-        <main>
+        <main className="main">
           <Switch>
             {routeItemsNav}
             <Route path="/score-per-assignment">

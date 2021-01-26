@@ -23,14 +23,14 @@ const Studentpage = (props) => {
           checkedFunFactor={props.checkedFunFactor}
         />
       </div>
-      <div>
-        {rightProfile}
+      <div class="studentPage">
         <Filters
           checkedDifficult={props.checkedDifficult}
           setStateDifficult={props.setStateDifficult}
           checkedFunFactor={props.checkedFunFactor}
           setStateFunFactor={props.setStateFunFactor}
         />
+        {rightProfile}
       </div>
     </div>
   );
