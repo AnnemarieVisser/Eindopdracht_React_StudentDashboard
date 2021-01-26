@@ -13,20 +13,20 @@ const BarChart = (props) => {
   const createDataWithLabelsDifficulty = data.map((item) => ({
     assignment: item.assignment,
     scoreDifficulty: item.scoreDifficulty,
-    label: `Assignment ${item.assignment}, Difficulty: ${item.scoreDifficulty}`,
+    label: `Assignment ${item.assignment}, Score Difficulty: ${item.scoreDifficulty}`,
   }));
 
   const createDataWithLabelsFunFactor = data.map((item) => ({
     assignment: item.assignment,
     scoreFunFactor: item.scoreFunFactor,
-    label: `Assignment ${item.assignment}, FunFactor: ${item.scoreFunFactor}`,
+    label: `Assignment ${item.assignment}, Score Fun: ${item.scoreFunFactor}`,
   }));
 
-  const difficultBarStyle = props.checkedDifficult
+  const barStyleDifficult = props.checkedDifficult
     ? { data: { fill: "#C2831C" }, labels: { fontSize: 8 } }
     : { data: { fillOpacity: 0 }, labels: { fontSize: 8 } };
 
-  const funFactorBarStyle = props.checkedFunFactor
+  const barStyleFun = props.checkedFunFactor
     ? { data: { fill: "#14213D" }, labels: { fontSize: 8 } }
     : { data: { fillOpacity: 0 }, labels: { fontSize: 8 } };
 
@@ -46,14 +46,14 @@ const BarChart = (props) => {
             data={createDataWithLabelsDifficulty}
             x="assignment"
             y="scoreDifficulty"
-            style={difficultBarStyle}
+            style={barStyleDifficult}
           />
           <VictoryBar
             labelComponent={<VictoryTooltip />}
             data={createDataWithLabelsFunFactor}
             x="assignment"
             y="scoreFunFactor"
-            style={funFactorBarStyle}
+            style={barStyleFun}
           />
         </VictoryGroup>
         <VictoryAxis
@@ -61,8 +61,9 @@ const BarChart = (props) => {
           tickFormat={props.assignment}
           style={{
             tickLabels: {
+              textAnchor: 'start',
               fontSize: 6,
-              padding: 10,
+              padding: 0,
               writingMode: "vertical-lr",
             },
           }}
@@ -74,7 +75,7 @@ const BarChart = (props) => {
           standalone={false}
           style={{
             tickLabels: {
-              fontSize: 8,
+              fontSize: 10,
             },
           }}
         />
