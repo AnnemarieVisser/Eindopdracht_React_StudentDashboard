@@ -2,11 +2,11 @@ import React from "react";
 
 const Filters = (props) => {
   const labelStyleDifficult = props.checkedDifficult
-    ? { color: "red" }
-    : { color: "green" };
+    ? { color: "#2a9d8f" }
+    : { color: "#e76f51" };
   const labelStyleFunFactor = props.checkedFunFactor
-    ? { color: "red" }
-    : { color: "green" };
+    ? { color: "#2a9d8f" }
+    : { color: "#e76f51" };
 
   return (
     <div className="filters">
@@ -19,8 +19,8 @@ const Filters = (props) => {
             onChange={(event) => props.setStateDifficult(event.target.checked)}
           />
           {props.checkedDifficult
-            ? "Exclude difficulty"
-            : "Include diffculty"}
+            ? "Difficulty showing"
+            : "Difficulty not showing"}
         </label>
         <label style={labelStyleFunFactor}>
           <input
@@ -29,8 +29,8 @@ const Filters = (props) => {
             onChange={(event) => props.setStateFunFactor(event.target.checked)}
           />
           {props.checkedFunFactor
-            ? "Exclude fun"
-            : "Include fun"}
+            ? "Fun showing"
+            : "Fun not showing"}
         </label>
       </div>
     </div>
