@@ -9,15 +9,15 @@ const Filters = (props) => {
     : { color: "green" };
 
   return (
-    <div className="filter-homepage">
-      <p className="expl">Use filters:</p>
-      <div className="filters">
-        <label className="first-label" style={labelStyleDifficult}>
+    <div>
+      <p>Use filters:</p>
+      <div>
+        <label style={labelStyleDifficult}>
           <input
             type="checkbox"
             checked={props.checkedDifficult}
             onChange={(event) => props.setStateDifficult(event.target.checked)}
-          ></input>
+          />
           {props.checkedDifficult
             ? "Exclude difficulty"
             : "Include diffculty"}
@@ -27,7 +27,7 @@ const Filters = (props) => {
             type="checkbox"
             checked={props.checkedFunFactor}
             onChange={(event) => props.setStateFunFactor(event.target.checked)}
-          ></input>
+          />
           {props.checkedFunFactor
             ? "Exclude fun"
             : "Include fun"}

@@ -1,9 +1,9 @@
 import React from "react";
-import BarChartAssignments from "./BarChartAssignments";
-import Legend from "../components/Legend";
+import BarsPerAssignment from "./BarsPerAssignment";
+import Legenda from "./Legenda";
 
 const ScoresPerAssignment = (props) => {
-  const radioButtonsToSort = props.assignments.map((assignment, index) => (
+  const sortingRadioButtons = props.assignments.map((assignment, index) => (
     <div key={index}>
       <label>
         <input
@@ -18,31 +18,26 @@ const ScoresPerAssignment = (props) => {
   ));
 
   const dataAssignment = props.dataRightAssignment;
-  console.log(dataAssignment);
 
   return (
     <div>
       <div>
-        <h1>Scores per assignment</h1>
-        <p>
-          Kies in de lijst rechts een opdracht. <br /> De grafiek hieronder laat
-          de data van die opdracht zien
-        </p>
-        <h4>
+        <h2>Score per assignment</h2>
+        <h3>
           {dataAssignment.length !== 0
-            ? "Huidige selectie: " + dataAssignment[0].assignment
-            : ""}
-        </h4>
+            ? "Selection: " + dataAssignment[0].assignment
+            : "No selection made yet"}
+        </h3>
       </div>
       <div>
-        <Legend legendTitle={"Scores for each assignment"} />
-        <BarChartAssignments
+        <Legenda legendaTitle={"Scores for each assignment"} />
+        <BarsPerAssignment
           data={props.dataRightAssignment}
           persons={props.persons}
         />
       </div>
       <div>
-        {radioButtonsToSort}
+        {sortingRadioButtons}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import data from "../../data/data";
 
 import Home from "../Home";
-import Studentpage from "../StudentPages";
+import Studentpage from "../StudentPage";
 import ScoresPerAssignment from "../ScoresPerAssignment";
 import studentProfiles from "../../data/dataStudentProfiles";
 
@@ -13,19 +13,19 @@ const App = () => {
   const [checkedDifficult, setStateCheckedDifficult] = useState(true);
   const [checkedFunFactor, setStateCheckedFunFactor] = useState(true);
 
-  const numberedStateData = state.map((object) => ({
-    name: object.name,
-    assignment: object.assignment,
-    scoreDifficulty: parseInt(object.scoreDifficulty),
-    scoreFunFactor: parseInt(object.scoreFunFactor),
+  const stateData = state.map((item) => ({
+    name: item.name,
+    assignment: item.assignment,
+    scoreDifficulty: parseInt(item.scoreDifficulty),
+    scoreFunFactor: parseInt(item.scoreFunFactor),
   }));
 
   const getDataRightStudent = (student) => {
-    return numberedStateData.filter((item) => item.name === student);
+    return stateData.filter((item) => item.name === student);
   };
 
   const getDataRightAssignment = (assignment) => {
-    const rightAssignment = numberedStateData.filter(
+    const rightAssignment = stateData.filter(
       (item) => item.assignment === assignment
     );
     setStateRightAssignment(rightAssignment);
@@ -36,22 +36,22 @@ const App = () => {
   const allAssignments = state.map((data) => data.assignment);
   const allUniqueAssignments = [...new Set(allAssignments)];
 
- const studentProfileInfo = studentProfiles.map((student, key) => (
-    <div className="student-profile" key={allUniquePersons[key]}>
-      <img src={`${student.photo}`} alt="Profile" />
-      <p className="student-name">
+  const studentProfileInformation = studentProfiles.map((student, key) => (
+    <div key={allUniquePersons[key]}>
+      <img src={`${student.photo}`} alt="Student" />
+      <p>
         {allUniquePersons[key]} {student.lastName}
       </p>
-      <div className="student-info">
-        <p>{student.age} jaar oud</p>
+      <div>
+        <p>{student.age} years old</p>
         <p>{student.phoneNumber}</p>
         <p>{student.email}</p>
       </div>
     </div>
-  )); 
+  ));
 
   const linkItemsNav = allUniquePersons.map((person) => (
-    <li key={person} className="students">
+    <li key={person} >
       <Link to={`/${person}`}>{person}</Link>
     </li>
   ));
@@ -62,7 +62,7 @@ const App = () => {
         person={person}
         getDataRightStudent={getDataRightStudent}
         assignments={allUniqueAssignments}
-        studentProfiles={studentProfileInfo} 
+        studentProfiles={studentProfileInformation}
         checkedDifficult={checkedDifficult}
         setStateDifficult={setStateCheckedDifficult}
         checkedFunFactor={checkedFunFactor}
@@ -72,7 +72,7 @@ const App = () => {
   ));
 
   const getAverageScores = (assignment, typeOfScore) => {
-    const filteredData = numberedStateData
+    const filteredData = stateData
       .filter((item) => item.assignment === assignment)
       .map((score) => score[typeOfScore]);
     const averageScore =
@@ -97,17 +97,14 @@ const App = () => {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link to="/">
-                  All students and assignments
-                </Link>
-              </li>
+              <li>Show chart per student:</li>
               {linkItemsNav}
+              <li>Show score per assignment:</li>
               <li>
-                <Link to="/score-per-assignment" className="home-link">
+                <Link to="/score-per-assignment">
                   Score per Assignment
                 </Link>
-              </li> 
+              </li>
             </ul>
           </div>
         </nav>
