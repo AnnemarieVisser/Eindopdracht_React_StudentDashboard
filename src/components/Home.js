@@ -10,10 +10,10 @@ const Home = (props) => {
         <p>Scroll in and out to view more/less datapoints.</p>
         <p className="gold">
           The golden bar shows average score for difficulty.
-      </p>
+        </p>
         <p className="blue">
-          The dark blue bar represents the average score for fun.
-      </p>
+          The dark blue bar represents the average score for enjoyment of the module.
+        </p>
       </div>
       <div>
         <BarChart

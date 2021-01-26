@@ -15,7 +15,7 @@ const Studentpage = (props) => {
         <h1>{props.person}</h1>
       </div>
       <div>
-        <Legenda legendaTitle={"Scores for each assignment"} />
+        <Legenda legendaTitle={"Scores given for each assignment. Scroll to zoom."} />
         <BarChart
           data={props.getDataRightStudent(props.person)}
           assignments={props.assignments}
