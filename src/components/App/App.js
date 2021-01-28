@@ -99,11 +99,11 @@ const App = () => {
               </li>
             </ul>
             <ul className="navPerStudent">
-              <li>Show chart per student:</li>
+              <p className="notAButton">Show chart per student:</p>
               {linkItemsNav}
             </ul>
             <ul className="navPerAssignment">
-              <li>Show score per assignment:</li>
+              <p className="notAButton">Show score per assignment:</p>
               <li>
                 <Link to="/score-per-assignment">
                   Score per Assignment
