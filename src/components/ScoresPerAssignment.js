@@ -23,11 +23,11 @@ const ScoresPerAssignment = (props) => {
     <div>
       <div>
         <h1>Score per assignment</h1>
-        <h3>
+        <h2>
           {dataAssignment.length !== 0
             ? "Selection: " + dataAssignment[0].assignment
             : "Please select an assignment below"}
-        </h3>
+        </h2>
       </div>
       <div>
         <Legenda legendaTitle={"Scores per assignment per student"} />

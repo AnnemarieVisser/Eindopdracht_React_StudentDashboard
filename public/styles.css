@@ -38,6 +38,8 @@ body {
     padding: 10px;
     margin: 5px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;  
 }
 
 a {
@@ -46,7 +48,7 @@ a {
     background-color: #FCA311;
 }
 
-.navPerStudent {
+.navPerStudent, .navPerAssignment {
     display: flex;
     flex-direction: column;    
 }
@@ -71,6 +73,14 @@ a {
 
 .studentPage {
     color: #e5e5e5;
+}
+
+.notAButton {
+    background-color: #7D8391;
+    border-radius: 20px;
+    text-align: center;
+    height: 20px;
+    padding: 15px;
 }
 
 .studentPage img {
