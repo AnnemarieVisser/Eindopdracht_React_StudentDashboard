@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import data from "../../data/data";
 
 import Home from "../Home";
+import Navigation from "../Navigation";
 import Studentpage from "../StudentPage";
 import ScoresPerAssignment from "../ScoresPerAssignment";
 import studentProfiles from "../../data/dataStudentProfiles";
@@ -89,29 +90,9 @@ const App = () => {
   return (
     <Router>
       <div className="container">
-        <nav className="nav">
-          <div>
-            <ul className="home">
-              <li>
-                <Link to="/">
-                  Show all students
-                </Link>
-              </li>
-            </ul>
-            <ul className="navPerStudent">
-              <p className="notAButton">Show chart per student:</p>
-              {linkItemsNav}
-            </ul>
-            <ul className="navPerAssignment">
-              <p className="notAButton">Show score per assignment:</p>
-              <li>
-                <Link to="/score-per-assignment">
-                  Score per Assignment
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Navigation
+          linkItemsNav={linkItemsNav}
+        />
         <main className="main">
           <Switch>
             {routeItemsNav}

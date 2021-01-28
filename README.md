@@ -29,8 +29,6 @@ Add student profiles to their respective pages. This was implemented using mock 
 - Be able to sort said table.
 - Load data dynamic from csv file
 
-
-
 #### Other stuff
 This challenge was designed by Winc Academy for the Frontend Development course.
 The mock students were part of the given information for the challenge. All other data is fake.
